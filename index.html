@@ -10,9 +10,17 @@
     <section class="signup-page">
         <div class="img-container">
             <img src="borabora.jpeg" alt="Bora Bora" />
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 24"
+            fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+            class="logo">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                <text x="28" y="20" class="svg-text">trvl</text>
+            </svg>
         </div>
+        
 
-        <form class="form-content">
+        <form class="form-content" action="" method="get">
             <p class="disclaimer">This is not a real online service.</p>
             <h2>
                 Join a community of travel bloggers, earn points, and redeem them on more travel experiences.
@@ -22,27 +30,40 @@
             <div class="user-input">
                 <div class="form-row">
                     <label for="first_name"></label>
-                    <input type="text" id="first_name" name="first_name" placeholder="First Name *" required>
+                    <input type="text" id="first_name" name="first_name"
+                        placeholder="First Name *"
+                        required>
                 </div>
                 <div class="form-row">
                     <label for="last_name"></label>
-                    <input type="text" id="last_name" name="last_name" placeholder="Last Name *" required>
+                    <input type="text" id="last_name" name="last_name"
+                        placeholder="Last Name *"
+                        required>
                 </div>
                 <div class="form-row">
                     <label for="email"></label>
-                    <input type="email" id="email" name="email" placeholder="Email *" required>
+                    <input type="email" id="email" name="email"
+                        placeholder="Email *"
+                        required>
                 </div>
                 <div class="form-row">
                     <label for="phone_number"></label>
-                    <input type="tel" id="phone_number" name="phone_number" placeholder="Phone Number">
+                    <input type="tel" id="phone_number" name="phone_number"
+                        placeholder="Phone Number (optional)"
+                        pattern="\d+">
                 </div>
                 <div class="form-row">
                     <label for="pwd"></label>
-                    <input type="password" id="pwd" name="pwd" placeholder="Password *" required>
+                    <input type="password" id="pwd" name="pwd"
+                        placeholder="Password *"
+                        required
+                        minlength="8">
                 </div>
                 <div class="form-row">
                     <label for="confirmpwd"></label>
-                    <input type="password" id="confirmpwd" name="confirmpwd" placeholder="Confirm Password *" required>
+                    <input type="password" id="confirmpwd" name="confirmpwd"
+                        placeholder="Confirm Password *"
+                        required>
                 </div>
             </div>
             

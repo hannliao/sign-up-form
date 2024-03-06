@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "jellee";
+    src:
+        url("fonts/Jellee-Bold.woff2") format(woff2),
+        url("fonts/Jellee-Bold.woff") format(woff);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,14 +21,31 @@ body {
 }
 
 .img-container {
+    position: relative;
     width: auto;
     height: 100vh;
-    overflow: hidden;
+     overflow: hidden;
 }
 
 .img-container img {
     width: auto;
     height: 100%;
+}
+
+.logo {
+    position: absolute;
+    top: 280px;
+    left: 0;
+    width: 100%;
+    stroke: #dcd0ed;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 16px;
+}
+
+.svg-text {
+    font-family: "jellee", sans-serif;
+    font-size: 24px;
+    letter-spacing: 1.3px;
 }
 
 .form-content {
@@ -90,4 +114,14 @@ button {
 
 #create:hover {
     background-color: #be929a;
+}
+
+input[type="email"]:invalid,
+input[type="tel"]:invalid {
+    border-color: red;
+}
+
+input[type="email"]:valid,
+input[type="tel"]:valid {
+    border-color: green;
 }
