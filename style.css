@@ -1,3 +1,10 @@
+:root {
+    --mauve: #ae7780;
+    --lightmauve: #be929a;
+    --lightpurple: #e6cde5;
+    --red: #df5e73;
+}
+
 @font-face {
     font-family: "jellee";
     src:
@@ -16,9 +23,12 @@ body {
 }
 
 .signup-page {
+    position: relative;
+    min-height: 100vh;
     display: flex;
 }
 
+/* img */
 .img-container {
     position: relative;
     width: auto;
@@ -30,25 +40,41 @@ body {
 .img-container img {
     width: auto;
     height: 100%;
+    display: block;
 }
 
-.logo {
+.header {
     position: absolute;
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    stroke: #e6cde5;
+    text-align: center;
+    color: var(--lightpurple);
     background-color: rgba(0, 0, 0, 0.4);
-    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.svg-text {
+.logo {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    margin: 20px;
+}
+
+.header h1 {
     font-family: "jellee", sans-serif;
-    font-size: 24px;
+    font-size: 50px;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--lightpurple);
     letter-spacing: 1.3px;
+    margin: 0;
 }
 
+/* form */
 .form-content {
     display: flex;
     flex-direction: column;
@@ -74,56 +100,64 @@ h1,
 .user-input {
     display: flex;
     flex-wrap: wrap;
+    gap: 25px;
 }
 
 .form-row {
-    margin-bottom: 20px;
-    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .form-row input[type="text"],
 .form-row input[type="email"],
 .form-row input[type="tel"],
-.form-row input[type="password"] {
-    min-width: 340px;
+.form-row input[type="password"],
+select {
+    width: 340px;
     font-size: 16px;
-    padding: 16px;
-    border: 1px solid grey;
-    border-radius: 5px;    
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+.form-row input[type="text"]:focus,
+.form-row input[type="email"]:focus,
+.form-row input[type="tel"]:focus,
+.form-row input[type="password"]:focus,
+select:focus {
+    outline: none;
+    border-bottom: 2px solid var(--lightmauve);
 }
 
 button {
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
+    border: none;
 }
 
 #create {
     width: 340px;
     padding: 17px;
-    background-color: #ae7780;
+    background-color: var(--mauve);
     color: white;
-    margin-bottom: 20px;
-    border: none;
+    margin: 20px 0;
     border-radius: 5px;
 }
 
 #login {
-    color: #ae7780;
+    color: var(--mauve);
     background-color: white;
-    border: none;
 }
 
 #create:hover {
-    background-color: #be929a;
+    background-color: var(--lightmauve);
 }
 
-input[type="email"]:invalid,
-input[type="tel"]:invalid {
-    border-color: red;
-}
-
-input[type="email"]:valid,
-input[type="tel"]:valid {
-    border-color: green;
+.error {
+    width: 340px;
+    font-size: 13px;
+    color: var(--red);
 }

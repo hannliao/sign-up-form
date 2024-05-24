@@ -5,28 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>trvl Sign-Up Form</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <section class="signup-page">
         <div class="img-container">
             <img src="borabora.jpeg" alt="Bora Bora" />
-            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 80 24"
-            fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-            class="logo">
+
+            <div class="header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                    stroke-linecap="round" stroke-linejoin="round" class="logo">
                 <circle cx="12" cy="12" r="10"></circle>
                 <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
-                <text x="28" y="20" class="svg-text">trvl</text>
             </svg>
-        </div>
-        
+            <h1>trvl</h1>
+            </div>
 
-        <form class="form-content" action="" method="get">
+        </div>
+
+        <form class="form-content" action="" method="post">
             <p class="disclaimer">This is not a real online service.</p>
             <h1>
-                Join a community of travel bloggers worldwide, earn points and redeem them on spectacular travel experiences.
+                Join a community of travel bloggers worldwide, 
+                earn points and redeem them on spectacular travel experiences.
             </h1>
             <span class="offer">
-                <h3 style="display: inline;">Limited time offer! $150 off select luxury resort bookings in Bora Bora</h3>
+                <h3 style="display: inline;">
+                    Limited time offer! $150 off select luxury resort bookings in Bora Bora
+                </h3>
                 <a href="#">exclusions apply</a>
             </span>
             
@@ -34,43 +41,67 @@
                 <div class="form-row">
                     <label for="first_name"></label>
                     <input type="text" id="first_name" name="first_name"
-                        placeholder="First Name *"
+                        placeholder="First Name"
                         required>
                 </div>
                 <div class="form-row">
                     <label for="last_name"></label>
                     <input type="text" id="last_name" name="last_name"
-                        placeholder="Last Name *"
+                        placeholder="Last Name"
                         required>
                 </div>
                 <div class="form-row">
                     <label for="email"></label>
                     <input type="email" id="email" name="email"
-                        placeholder="Email *"
+                        placeholder="Email"
                         required>
+                    <span class="error"></span>
                 </div>
                 <div class="form-row">
-                    <label for="phone_number"></label>
-                    <input type="tel" id="phone_number" name="phone_number"
-                        placeholder="Phone Number (optional)"
-                        pattern="\d+">
+                    <label for="phone"></label>
+                    <input type="tel" id="phone" name="phone"
+                        placeholder="Phone Number"
+                        minlength="6"
+                        maxlength="13"
+                        pattern="\d+"
+                        required>
+                    <span class="error"></span>
                 </div>
                 <div class="form-row">
                     <label for="pwd"></label>
                     <input type="password" id="pwd" name="pwd"
-                        placeholder="Password *"
-                        required
-                        minlength="8">
+                        placeholder="Password"
+                        minlength="8"
+                        required>
+                    <span class="error"></span>
                 </div>
                 <div class="form-row">
-                    <label for="confirmpwd"></label>
-                    <input type="password" id="confirmpwd" name="confirmpwd"
-                        placeholder="Confirm Password *"
+                    <label for="confirmPwd"></label>
+                    <input type="password" id="confirmPwd" name="confirmPwd"
+                        placeholder="Confirm Password"
                         required>
+                    <span class="error"></span>
+                </div>
+                <div class="form-row">
+                    <label for="country"></label>
+                    <select id="country" name="country">
+                        <option value="pf">French Polynesia</option>
+                        <option value="jp">Japan</option>
+                        <option value="kr">South Korea</option>
+                        <option value="tw">Taiwan</option>
+                        <option value="us" selected>United States</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="zipcode"></label>
+                    <input type="text" id="zipcode" name="zipcode" 
+                        placeholder="Zip Code"
+                        required>
+                    <span class="zip error"></span>
                 </div>
             </div>
             
-            <button type="button" id="create">Create Account</button>
+            <button type="submit" id="create">Create Account</button>
             <p>
                 Already have an account? 
                 <button type="button" id="login">Log in</button>
